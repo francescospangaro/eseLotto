@@ -42,7 +42,7 @@ public class EseLotto {
             thRicercaPrimoNumero.join();
             thRicercaSecondoNumero.join();
             
-            System.out.println("Hai fatto ambo " + ptrDati.getNumRuoteVinte() + "volte");
+            System.out.println("Hai fatto ambo " + ptrDati.getNumRuoteVinte() + " volte");
         } catch (InterruptedException ex) {
             Logger.getLogger(EseLotto.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -108,7 +108,7 @@ public class DatiCondivisi {
         this.numRuoteVinte = numRuoteVinte;
     }
     
-    public void incVittorie(){
+    public synchronized void incVittorie(){
         numRuoteVinte++;
     }
     
