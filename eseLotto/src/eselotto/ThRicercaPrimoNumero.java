@@ -45,9 +45,9 @@ public class ThRicercaPrimoNumero extends Thread{
                 if(ptrDati.isVittoriaSecondoNumero()){
                     ptrDati.incVittorie();
                     ptrDati.setVittoriaPrimoNumero(false);
-                }  
-                ptrDati.setVittoriaPrimoNumero(false);
+                }   
             }
+            ptrDati.setVittoriaPrimoNumero(false);
             if(!(i == 4)) 
            ptrDati.signalSyncPriEst();
             }

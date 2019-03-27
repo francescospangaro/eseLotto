@@ -46,8 +46,8 @@ public class ThRicercaSecondoNumero extends Thread{
                     ptrDati.incVittorie();
                     ptrDati.setVittoriaSecondoNumero(false);
                 }
-                ptrDati.setVittoriaSecondoNumero(false);
             }
+            ptrDati.setVittoriaSecondoNumero(false);
             if(!(i == 4))
             ptrDati.signalSyncSecEst(); 
             }
