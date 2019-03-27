@@ -40,7 +40,6 @@ public class ThRicercaSecondoNumero extends Thread{
         for(int j = 0; j < ptrDati.numRuote; j++){
        ptrDati.waitSyncEstSec();
             for(int i = 0; i < 5; i++){
-            
             if(numDaCercare == estratti[i]){
                 ptrDati.setVittoriaSecondoNumero(true);
                 if(ptrDati.isVittoriaPrimoNumero()){
@@ -52,6 +51,7 @@ public class ThRicercaSecondoNumero extends Thread{
             if(!(i == 4))
             ptrDati.signalSyncSecEst(); 
             }
+            System.out.println("Fine ricerca secondo numero " + j);
        }
         System.out.println("Fine ThRicercaSecondoNumero");
     }

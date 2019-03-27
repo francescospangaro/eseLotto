@@ -49,6 +49,7 @@ public class ThEstrazione extends Thread{
             }
             ptrDati.signalSyncEstPri();
             ptrDati.signalSyncEstSec();
+            System.out.println("Fine estrazione " + i);
         }
         System.out.println("Fine ThEstrazione");
     }

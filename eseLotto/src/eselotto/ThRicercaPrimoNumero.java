@@ -51,6 +51,7 @@ public class ThRicercaPrimoNumero extends Thread{
             if(!(i == 4)) 
            ptrDati.signalSyncPriEst();
             }
+            System.out.println("Fine ricerca primo numero " + j);
         }
         System.out.println("Fine ThRicercaPrimoNumero");
     }
