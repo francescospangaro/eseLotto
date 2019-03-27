@@ -37,8 +37,9 @@ public class ThRicercaPrimoNumero extends Thread{
     }
     
     public void run(){
-        for(int i = 0; i < 5; i++){
-            ptrDati.waitSyncEstPri();
+        for(int j = 0; j < ptrDati.numRuote; j++){
+        ptrDati.waitSyncEstPri();
+            for(int i = 0; i < 5; i++){
             if(numDaCercare == estratti[i]){
                 ptrDati.setVittoriaPrimoNumero(true);
                 if(ptrDati.isVittoriaSecondoNumero()){
@@ -49,6 +50,7 @@ public class ThRicercaPrimoNumero extends Thread{
             }
             if(!(i == 4)) 
            ptrDati.signalSyncPriEst();
+            }
         }
         System.out.println("Fine ThRicercaPrimoNumero");
     }
