@@ -13,12 +13,11 @@ public class ThRicercaPrimoNumero extends Thread {
 
     DatiCondivisi ptrDati;
     int numDaCercare;
-    int[] estratti = new int[5];
+
 
     public ThRicercaPrimoNumero(DatiCondivisi ptrDati) {
         this.ptrDati = ptrDati;
         this.numDaCercare = ptrDati.getPrimoNum();
-        this.estratti = ptrDati.getEstratti();
     }
 
     public DatiCondivisi getPtrDati() {
@@ -41,7 +40,7 @@ public class ThRicercaPrimoNumero extends Thread {
         for (int j = 0; j < ptrDati.numRuote; j++) {
             ptrDati.waitSyncEstPri();
             for (int i = 0; i < 5; i++) {
-                if (numDaCercare == estratti[i]) {
+                if (numDaCercare == ptrDati.getEstratti()[i]) {
                     ptrDati.setVittoriaPrimoNumero(true);
                     if (ptrDati.isVittoriaSecondoNumero()) {
                         ptrDati.incVittorie();

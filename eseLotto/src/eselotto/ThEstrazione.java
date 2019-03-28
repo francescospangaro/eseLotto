@@ -44,8 +44,9 @@ public class ThEstrazione extends Thread{
             ptrDati.waitSyncPriEst();
             ptrDati.waitSyncSecEst();
             for(int cont = 0; cont < 5; cont ++){
-                estratto = rand.nextInt(2)+1;
+                estratto = rand.nextInt(7)+1;
                 estratti[cont]=estratto;
+                System.out.println(estratto);
             }
             ptrDati.setEstratti(estratti);
             System.out.println("Fine estrazione " + i); 
