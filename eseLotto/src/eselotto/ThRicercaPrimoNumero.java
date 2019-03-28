@@ -50,8 +50,8 @@ public class ThRicercaPrimoNumero extends Thread {
                 }
                 ptrDati.setVittoriaPrimoNumero(false);
             }
-            ptrDati.signalSyncPriEst();
             System.out.println("Fine ricerca primo numero " + j);
+            ptrDati.signalSyncPriEst();
         }
         System.out.println("Fine ThRicercaPrimoNumero");
     }

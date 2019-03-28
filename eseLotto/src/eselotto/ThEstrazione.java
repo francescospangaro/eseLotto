@@ -44,13 +44,13 @@ public class ThEstrazione extends Thread{
             ptrDati.waitSyncPriEst();
             ptrDati.waitSyncSecEst();
             for(int cont = 0; cont < 5; cont ++){
-                estratto = rand.nextInt(90)+1;
+                estratto = rand.nextInt(2)+1;
                 estratti[cont]=estratto;
             }
             ptrDati.setEstratti(estratti);
+            System.out.println("Fine estrazione " + i); 
             ptrDati.signalSyncEstPri();
             ptrDati.signalSyncEstSec();
-            System.out.println("Fine estrazione " + i);
         }
         System.out.println("Fine ThEstrazione");
     }

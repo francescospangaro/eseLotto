@@ -50,8 +50,8 @@ public class ThRicercaSecondoNumero extends Thread {
                 }
                 ptrDati.setVittoriaSecondoNumero(false);
             }
-            ptrDati.signalSyncSecEst();
             System.out.println("Fine ricerca secondo numero " + j);
+            ptrDati.signalSyncSecEst();
         }
         System.out.println("Fine ThRicercaSecondoNumero");
     }
