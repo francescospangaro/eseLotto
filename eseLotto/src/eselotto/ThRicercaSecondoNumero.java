@@ -9,10 +9,11 @@ package eselotto;
  *
  * @author franc_000
  */
-public class ThRicercaSecondoNumero extends Thread{
+public class ThRicercaSecondoNumero extends Thread {
+
     DatiCondivisi ptrDati;
     int numDaCercare;
-    int[]estratti = new int [5];
+    int[] estratti = new int[5];
 
     public ThRicercaSecondoNumero(DatiCondivisi ptrDati) {
         this.ptrDati = ptrDati;
@@ -35,24 +36,23 @@ public class ThRicercaSecondoNumero extends Thread{
     public void setNumDaCercare(int numDaCercare) {
         this.numDaCercare = numDaCercare;
     }
-    
-    public void run(){
-        for(int j = 0; j < ptrDati.numRuote; j++){
-       ptrDati.waitSyncEstSec();
-            for(int i = 0; i < 5; i++){
-            if(numDaCercare == estratti[i]){
-                ptrDati.setVittoriaSecondoNumero(true);
-                if(ptrDati.isVittoriaPrimoNumero()){
-                    ptrDati.incVittorie();
-                    ptrDati.setVittoriaSecondoNumero(false);
+
+    public void run() {
+        for (int j = 0; j < ptrDati.numRuote; j++) {
+            ptrDati.waitSyncEstSec();
+            for (int i = 0; i < 5; i++) {
+                if (numDaCercare == estratti[i]) {
+                    ptrDati.setVittoriaSecondoNumero(true);
+                    if (ptrDati.isVittoriaPrimoNumero()) {
+                        ptrDati.incVittorie();
+                        ptrDati.setVittoriaSecondoNumero(false);
+                    }
                 }
+                ptrDati.setVittoriaSecondoNumero(false);
             }
-            ptrDati.setVittoriaSecondoNumero(false);
-            if(!(i == 4))
-            ptrDati.signalSyncSecEst(); 
-            }
+            ptrDati.signalSyncSecEst();
             System.out.println("Fine ricerca secondo numero " + j);
-       }
+        }
         System.out.println("Fine ThRicercaSecondoNumero");
     }
 }

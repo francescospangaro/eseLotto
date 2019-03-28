@@ -47,6 +47,7 @@ public class ThEstrazione extends Thread{
                 estratto = rand.nextInt(90)+1;
                 estratti[cont]=estratto;
             }
+            ptrDati.setEstratti(estratti);
             ptrDati.signalSyncEstPri();
             ptrDati.signalSyncEstSec();
             System.out.println("Fine estrazione " + i);
